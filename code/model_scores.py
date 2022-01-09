@@ -16,7 +16,7 @@ def model_accuracy(model, X, y):
     (acc,lb,ub) - accuracy, lowerbound, upperbound
   '''
   # compute the accuracy of optimal classifier      
-  predict_y = grid.best_estimator_.predict(X)
+  predict_y = model.predict(X)
   acc = accuracy_score(y, predict_y)
 
   # 95% confidence interval
